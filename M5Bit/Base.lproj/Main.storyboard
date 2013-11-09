@@ -50,6 +50,18 @@
                                     <action selector="giveAccessToFitBitTapped:" destination="bmH-Rw-Nxh" eventType="touchUpInside" id="Fdj-El-J4e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UVb-KM-oPt">
+                                <rect key="frame" x="60" y="455" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91274736828450986" green="0.91637632223412191" blue="1" alpha="0.27000000000000002" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" red="1" green="0.011459765573150094" blue="0.034994661922375214" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kSh-yZ-KqC" kind="push" id="j46-5h-HQI"/>
+                                </connections>
+                            </button>
                             <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tj-af-B0K">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -60,6 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="sZD-4S-ZjJ"/>
                     <connections>
+                        <outlet property="continueButton" destination="UVb-KM-oPt" id="FIa-8M-TGe"/>
                         <outlet property="fitbitButton" destination="OK8-tj-SA7" id="Vi1-ac-pvc"/>
                         <outlet property="fitbitInfoLabel" destination="6eK-Xj-NGn" id="ePo-le-ZNy"/>
                         <outlet property="m5Button" destination="HkT-0s-Osh" id="smM-Tr-t0K"/>
@@ -71,17 +84,17 @@
             </objects>
             <point key="canvasLocation" x="294" y="-13"/>
         </scene>
-        <!--View Controller - Title-->
+        <!--Stats View Controller - Title-->
         <scene sceneID="CpV-m3-kkl">
             <objects>
-                <tableViewController id="kSh-yZ-KqC" customClass="ORViewController" sceneMemberID="viewController">
+                <tableViewController id="kSh-yZ-KqC" customClass="ORStatsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="e0p-lb-Mle">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="whW-NU-ryo">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="whW-NU-ryo" id="Pbl-mH-r2g">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>

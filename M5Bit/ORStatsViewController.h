@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ORViewController : UITableViewController
+@interface ORStatsViewController : UITableViewController
 
 @end
