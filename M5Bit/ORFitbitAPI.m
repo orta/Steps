@@ -70,5 +70,39 @@
     [task resume];
 }
 
+- (void)setSteps:(NSInteger)steps forDaysAgo:(NSInteger)daysAgo :(void (^)(id JSON))onComplete failure:(void (^)(NSError *error))onFailure
+{
+    NSDate *date = [NSDate dateWithDaysBeforeNow:daysAgo];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+
+    NSString *dayString = [formatter stringFromDate:date];
+
+
+    NSDictionary *params = @{
+        @"activityName" : @"iphone_walking",
+        @"date": dayString,
+        @"distanceUnit":@"Steps",
+        @"distance": @(steps),
+        @"startTime": @"00:00",
+        @"durationMillis": @(10000)
+    };
+
+    NSURLRequest *request = [OAuth1Controller preparedRequestForPath:@"1/user/-/activities.json" parameters:params HTTPmethod:@"POST" oauthToken:self.token oauthSecret:self.secret];
+
+    NSURLSessionDataTask *task = [self.manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error && onFailure) {
+            onFailure(error);
+
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                onComplete(responseObject);
+            });
+        }
+    }];
+
+    [task resume];
+}
+
 
 @end

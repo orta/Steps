@@ -77,7 +77,6 @@
             NSLog(@"error");
         }];
 
-
         [self.stats addObject:stat];
     }
 
@@ -99,7 +98,14 @@
     return cell;
 }
 
-
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Stat *stat = self.stats[indexPath.row];
+    [[ORFitbitAPI sharedAPI] setSteps:stat.m5Steps forDaysAgo:indexPath.row :^(id JSON) {
+        NSLog(@"win");
+    } failure:^(NSError *error) {
+        NSLog(@"fail");
+    }];
+}
 
 @end
