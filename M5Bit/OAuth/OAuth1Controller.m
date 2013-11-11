@@ -207,6 +207,7 @@ static inline NSDictionary *CHParametersFromQueryString(NSString *queryString)
     NSString *parametersString = CHQueryStringFromParametersWithEncoding(allParameters, NSUTF8StringEncoding);
     
     NSString *baseString = [REQUEST_TOKEN_METHOD stringByAppendingFormat:@"&%@&%@", request_url.utf8AndURLEncode, parametersString.utf8AndURLEncode];
+
     NSString *secretString = [oauth_consumer_secret.utf8AndURLEncode stringByAppendingString:@"&"];
     NSString *oauth_signature = [self.class signClearText:baseString withSecret:secretString];
     [allParameters setValue:oauth_signature forKey:@"oauth_signature"];
@@ -215,6 +216,8 @@ static inline NSDictionary *CHParametersFromQueryString(NSString *queryString)
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:request_url]];
     request.HTTPMethod = REQUEST_TOKEN_METHOD;
+    baseString = [baseString stringByReplacingOccurrencesOfString:@"%2C" withString:@"%252C"];
+
     
     NSMutableArray *parameterPairs = [NSMutableArray array];
     for (NSString *name in allParameters) {
@@ -393,16 +396,19 @@ static inline NSDictionary *CHParametersFromQueryString(NSString *queryString)
     if (path) request_url = [request_url stringByAppendingString:path];
     NSString *oauth_consumer_secret = CONSUMER_SECRET;
     NSString *baseString = [HTTPmethod stringByAppendingFormat:@"&%@&%@", request_url.utf8AndURLEncode, parametersString.utf8AndURLEncode];
+
     NSString *secretString = [oauth_consumer_secret.utf8AndURLEncode stringByAppendingFormat:@"&%@", oauth_token_secret.utf8AndURLEncode];
     NSString *oauth_signature = [self.class signClearText:baseString withSecret:secretString];
     allParameters[@"oauth_signature"] = oauth_signature;
-    
+
+
     NSString *queryString;
     if (queryParameters) queryString = CHQueryStringFromParametersWithEncoding(queryParameters, NSUTF8StringEncoding);
     if (queryString) request_url = [request_url stringByAppendingFormat:@"?%@", queryString];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:request_url]];
     request.HTTPMethod = HTTPmethod;
-    
+
+
     NSMutableArray *parameterPairs = [NSMutableArray array];
     [allParameters removeObjectsForKeys:queryParameters.allKeys];
     for (NSString *name in allParameters) {
@@ -413,6 +419,7 @@ static inline NSDictionary *CHParametersFromQueryString(NSString *queryString)
     [request setValue:oAuthHeader forHTTPHeaderField:@"Authorization"];
     if ([HTTPmethod isEqualToString:@"POST"]
         && queryParameters != nil) {
+        
         NSData *body = [queryString dataUsingEncoding:NSUTF8StringEncoding];
         [request setHTTPBody:body];
     }

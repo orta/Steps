@@ -19,17 +19,32 @@ PODS:
   - AFNetworking/Serialization (2.0.2)
   - AFNetworking/UIKit (2.0.2):
     - AFNetworking/NSURLConnection
+  - ASIHTTPRequest (1.8.1):
+    - ASIHTTPRequest/ASIWebPageRequest
+    - ASIHTTPRequest/CloudFiles
+    - ASIHTTPRequest/S3
+    - Reachability
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/CloudFiles (1.8.1):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.1):
+    - Reachability
   - NSDate-Extensions (0.0.1)
+  - Reachability (3.1.1)
   - SFHFKeychainUtils (0.0.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - ASIHTTPRequest
   - NSDate-Extensions (~> 0.0.1)
   - SFHFKeychainUtils (~> 0.0.1)
 
 SPEC CHECKSUMS:
   AFNetworking: 22de50ae71ab1c4859773f61068d6fcd1d8f9a4d
+  ASIHTTPRequest: 162783e0cd71bdd3ff1ceed0cd5fa9505e0116a8
   NSDate-Extensions: b78c2b3f363acdcd7b5d2547a6bef6656cd8ff70
+  Reachability: 2be6bc2fd2bd31d97f5db33e75e4b29c79e95883
   SFHFKeychainUtils: e828dbd9eaa509486acf95d8de2ebd414c4b7451
 
 COCOAPODS: 0.27.1

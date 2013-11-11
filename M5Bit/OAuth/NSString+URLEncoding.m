@@ -23,10 +23,7 @@
 
 + (NSString *)getUUID
 {
-    CFUUIDRef uuid = CFUUIDCreate(NULL);
-    NSString *uuidStr = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, uuid);
-    CFRelease(uuid);
-    return uuidStr;
+    return [[NSUUID UUID] UUIDString];
 }
 
 

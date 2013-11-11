@@ -34,9 +34,9 @@
 {
     [super viewDidLoad];
 
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"has_access_m7"] && [SFHFKeychainUtils getPasswordForUsername:@"token" andServiceName:@"m7bit" error:nil]) {
+//    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"has_access_m7"] && [SFHFKeychainUtils getPasswordForUsername:@"token" andServiceName:@"m7bit" error:nil]) {
         [self.navigationController pushViewController:[[ORStatsViewController alloc]init] animated:NO];
-    }
+//    }
 }
 
 - (IBAction)giveAccessToM5Tapped:(id)sender

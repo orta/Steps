@@ -9,21 +9,16 @@
 #import "ORStatsViewController.h"
 #import <NSDate-Extensions/NSDate-Utilities.h>
 #import "ORFitbitAPI.h"
-
+#import "ORStat.h"
+#import "ORDisplayCell.h"
+#import "ARReusableLoadingView.h"
 
 @import CoreMotion;
-
-@interface Stat : NSObject
-@property (assign, nonatomic) NSInteger m5Steps;
-@property (assign, nonatomic) NSInteger fitbitSteps;
-@end
-
-@implementation Stat
-@end
 
 @interface ORStatsViewController ()
 @property (strong, nonatomic) CMStepCounter *stepCounter;
 @property (strong, nonatomic) NSMutableArray *stats;
+@property (assign, nonatomic) BOOL *getWeekLock;
 @end
 
 @implementation ORStatsViewController
@@ -32,10 +27,12 @@
 {
     [super viewDidLoad];
 
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SearchCell"];
+    [self.tableView registerClass:[ORDisplayCell class] forCellReuseIdentifier:@"SearchCell"];
+    [self.tableView registerClass:[ARReusableLoadingView class] forCellReuseIdentifier:@"LoadingCell"];
 
     self.stepCounter = [[CMStepCounter alloc] init];
     self.stats = [NSMutableArray array];
+    self.navigationItem.hidesBackButton = YES;
 
     [self getWeekAtIndex:0];
 }
@@ -46,7 +43,7 @@
 
     for (NSInteger i = index; i < max; i++) {
 
-        __block Stat *stat = [[Stat alloc] init];
+        __block ORStat *stat = [[ORStat alloc] init];
 
         NSDate *firstDay = [NSDate dateWithDaysBeforeNow:i];
         NSDate *lastDay = [NSDate dateWithDaysBeforeNow:i + 1];
@@ -63,7 +60,7 @@
             });
         }];
 
-        [[ORFitbitAPI sharedAPI] getStepsForDaysAgo:0 :^(id JSON) {
+        [[ORFitbitAPI sharedAPI] getStepsForDaysAgo:i :^(id JSON) {
             NSNumber *steps = JSON[@"summary"][@"steps"];
             stat.fitbitSteps = steps.integerValue;
 
@@ -83,26 +80,43 @@
     [self.tableView reloadData];
 }
 
-
 - (NSInteger)tableView:(UITableView *)aTableView numberOfRowsInSection:(NSInteger)section {
-    return self.stats.count;
+    return self.stats.count + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SearchCell"];
-    Stat *stat = self.stats[indexPath.row];
+    BOOL isLastIndex = indexPath.row == self.stats.count;
+    NSString *identifier = isLastIndex? @"LoadingCell" : @"SearchCell";
 
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld local %ld fitbit ", (long)stat.m5Steps,  (long)stat.fitbitSteps];
+    ORDisplayCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    if (isLastIndex) return cell;
+
+    ORStat *stat = self.stats[indexPath.row];
+    [cell updateWithStat:stat];
 
     return cell;
 }
 
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    if (indexPath.row == self.stats.count){
+        return nil;
+    };
+    return indexPath;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Stat *stat = self.stats[indexPath.row];
+    ORStat *stat = self.stats[indexPath.row];
+
     [[ORFitbitAPI sharedAPI] setSteps:stat.m5Steps forDaysAgo:indexPath.row :^(id JSON) {
         NSLog(@"win");
+        stat.fitbitSteps = stat.m5Steps;
+
+        ORDisplayCell *cell = (id)[tableView  cellForRowAtIndexPath:indexPath];
+        [cell updateWithStat:stat];
+
     } failure:^(NSError *error) {
         NSLog(@"fail");
     }];

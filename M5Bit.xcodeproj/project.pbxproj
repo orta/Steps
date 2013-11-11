@@ -28,6 +28,14 @@
 		60E47A39182E8E8E0003E4BF /* OAuth1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A33182E8E8E0003E4BF /* OAuth1Controller.m */; };
 		60E47A3A182E8E8E0003E4BF /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A35182E8E8E0003E4BF /* NSString+URLEncoding.m */; };
 		60E47A3D182ED07B0003E4BF /* ORFitbitAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A3C182ED07B0003E4BF /* ORFitbitAPI.m */; };
+		60E47A45183072F90003E4BF /* ASIFormDataRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A42183072F90003E4BF /* ASIFormDataRequest+OAuth.m */; };
+		60E47A46183072F90003E4BF /* ASIHTTPRequest+OAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A44183072F90003E4BF /* ASIHTTPRequest+OAuth.m */; };
+		60E47A4B183073210003E4BF /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A48183073210003E4BF /* NSData+Base64.m */; };
+		60E47A4C183073210003E4BF /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A4A183073210003E4BF /* NSString+URLEncode.m */; };
+		60E47A4F18307C820003E4BF /* ORDisplayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A4E18307C820003E4BF /* ORDisplayCell.m */; };
+		60E47A5218307CA40003E4BF /* ORStat.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A5118307CA40003E4BF /* ORStat.m */; };
+		60E47A5A18307E6F0003E4BF /* ARSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A5918307E6F0003E4BF /* ARSpinner.m */; };
+		60E47A5D18307EA60003E4BF /* ARReusableLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A5C18307EA60003E4BF /* ARReusableLoadingView.m */; };
 		A95A9BD3A7E64AC1AFF7130E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD81E4B729994DBF8D3443B5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,22 @@
 		60E47A35182E8E8E0003E4BF /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 		60E47A3B182ED07B0003E4BF /* ORFitbitAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORFitbitAPI.h; sourceTree = "<group>"; };
 		60E47A3C182ED07B0003E4BF /* ORFitbitAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORFitbitAPI.m; sourceTree = "<group>"; };
+		60E47A41183072F90003E4BF /* ASIFormDataRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIFormDataRequest+OAuth.h"; path = "../ASIFormDataRequest+OAuth.h"; sourceTree = "<group>"; };
+		60E47A42183072F90003E4BF /* ASIFormDataRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIFormDataRequest+OAuth.m"; path = "../ASIFormDataRequest+OAuth.m"; sourceTree = "<group>"; };
+		60E47A43183072F90003E4BF /* ASIHTTPRequest+OAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ASIHTTPRequest+OAuth.h"; path = "../ASIHTTPRequest+OAuth.h"; sourceTree = "<group>"; };
+		60E47A44183072F90003E4BF /* ASIHTTPRequest+OAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ASIHTTPRequest+OAuth.m"; path = "../ASIHTTPRequest+OAuth.m"; sourceTree = "<group>"; };
+		60E47A47183073210003E4BF /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "../NSData+Base64.h"; sourceTree = "<group>"; };
+		60E47A48183073210003E4BF /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "../NSData+Base64.m"; sourceTree = "<group>"; };
+		60E47A49183073210003E4BF /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "../NSString+URLEncode.h"; sourceTree = "<group>"; };
+		60E47A4A183073210003E4BF /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "../NSString+URLEncode.m"; sourceTree = "<group>"; };
+		60E47A4D18307C820003E4BF /* ORDisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORDisplayCell.h; sourceTree = "<group>"; };
+		60E47A4E18307C820003E4BF /* ORDisplayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORDisplayCell.m; sourceTree = "<group>"; };
+		60E47A5018307CA40003E4BF /* ORStat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORStat.h; sourceTree = "<group>"; };
+		60E47A5118307CA40003E4BF /* ORStat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORStat.m; sourceTree = "<group>"; };
+		60E47A5818307E6F0003E4BF /* ARSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARSpinner.h; sourceTree = "<group>"; };
+		60E47A5918307E6F0003E4BF /* ARSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARSpinner.m; sourceTree = "<group>"; };
+		60E47A5B18307EA60003E4BF /* ARReusableLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARReusableLoadingView.h; sourceTree = "<group>"; };
+		60E47A5C18307EA60003E4BF /* ARReusableLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARReusableLoadingView.m; sourceTree = "<group>"; };
 		FD81E4B729994DBF8D3443B5 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,15 +163,13 @@
 		60CA3120182E77020022C7C8 /* M5Bit */ = {
 			isa = PBXGroup;
 			children = (
+				60E47A5618307D0A0003E4BF /* View */,
+				60E47A5518307CF50003E4BF /* API */,
+				60E47A5418307CF00003E4BF /* VC */,
+				60E47A5318307CEB0003E4BF /* Models */,
 				60CA3129182E77020022C7C8 /* ORAppDelegate.h */,
 				60CA312A182E77020022C7C8 /* ORAppDelegate.m */,
 				60CA312C182E77020022C7C8 /* Main.storyboard */,
-				60CA312F182E77020022C7C8 /* ORStatsViewController.h */,
-				60CA3130182E77020022C7C8 /* ORStatsViewController.m */,
-				60CA3151182E7E2B0022C7C8 /* ORSetupViewController.h */,
-				60CA3152182E7E2B0022C7C8 /* ORSetupViewController.m */,
-				60E47A3B182ED07B0003E4BF /* ORFitbitAPI.h */,
-				60E47A3C182ED07B0003E4BF /* ORFitbitAPI.m */,
 				60CA3132182E77020022C7C8 /* Images.xcassets */,
 				60E47A2B182E8E7F0003E4BF /* OAuth */,
 				60CA3121182E77020022C7C8 /* Supporting Files */,
@@ -187,6 +209,14 @@
 		60E47A2B182E8E7F0003E4BF /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				60E47A41183072F90003E4BF /* ASIFormDataRequest+OAuth.h */,
+				60E47A42183072F90003E4BF /* ASIFormDataRequest+OAuth.m */,
+				60E47A43183072F90003E4BF /* ASIHTTPRequest+OAuth.h */,
+				60E47A44183072F90003E4BF /* ASIHTTPRequest+OAuth.m */,
+				60E47A47183073210003E4BF /* NSData+Base64.h */,
+				60E47A48183073210003E4BF /* NSData+Base64.m */,
+				60E47A49183073210003E4BF /* NSString+URLEncode.h */,
+				60E47A4A183073210003E4BF /* NSString+URLEncode.m */,
 				60E47A2C182E8E8E0003E4BF /* Base64Transcoder.c */,
 				60E47A2D182E8E8E0003E4BF /* Base64Transcoder.h */,
 				60E47A2E182E8E8E0003E4BF /* hmac.c */,
@@ -199,6 +229,56 @@
 				60E47A35182E8E8E0003E4BF /* NSString+URLEncoding.m */,
 			);
 			path = OAuth;
+			sourceTree = "<group>";
+		};
+		60E47A5318307CEB0003E4BF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				60E47A5118307CA40003E4BF /* ORStat.m */,
+				60E47A5018307CA40003E4BF /* ORStat.h */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		60E47A5418307CF00003E4BF /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				60E47A5718307D540003E4BF /* setup */,
+				60CA312F182E77020022C7C8 /* ORStatsViewController.h */,
+				60CA3130182E77020022C7C8 /* ORStatsViewController.m */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		60E47A5518307CF50003E4BF /* API */ = {
+			isa = PBXGroup;
+			children = (
+				60E47A3B182ED07B0003E4BF /* ORFitbitAPI.h */,
+				60E47A3C182ED07B0003E4BF /* ORFitbitAPI.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		60E47A5618307D0A0003E4BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60E47A4D18307C820003E4BF /* ORDisplayCell.h */,
+				60E47A4E18307C820003E4BF /* ORDisplayCell.m */,
+				60E47A5818307E6F0003E4BF /* ARSpinner.h */,
+				60E47A5918307E6F0003E4BF /* ARSpinner.m */,
+				60E47A5B18307EA60003E4BF /* ARReusableLoadingView.h */,
+				60E47A5C18307EA60003E4BF /* ARReusableLoadingView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		60E47A5718307D540003E4BF /* setup */ = {
+			isa = PBXGroup;
+			children = (
+				60CA3151182E7E2B0022C7C8 /* ORSetupViewController.h */,
+				60CA3152182E7E2B0022C7C8 /* ORSetupViewController.m */,
+			);
+			name = setup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,16 +414,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60E47A5218307CA40003E4BF /* ORStat.m in Sources */,
+				60E47A45183072F90003E4BF /* ASIFormDataRequest+OAuth.m in Sources */,
 				60E47A3A182E8E8E0003E4BF /* NSString+URLEncoding.m in Sources */,
 				60E47A37182E8E8E0003E4BF /* hmac.c in Sources */,
+				60E47A4C183073210003E4BF /* NSString+URLEncode.m in Sources */,
 				60CA3127182E77020022C7C8 /* main.m in Sources */,
 				60CA312B182E77020022C7C8 /* ORAppDelegate.m in Sources */,
 				60E47A39182E8E8E0003E4BF /* OAuth1Controller.m in Sources */,
 				60CA3131182E77020022C7C8 /* ORStatsViewController.m in Sources */,
 				60E47A38182E8E8E0003E4BF /* sha1.c in Sources */,
+				60E47A5A18307E6F0003E4BF /* ARSpinner.m in Sources */,
 				60E47A36182E8E8E0003E4BF /* Base64Transcoder.c in Sources */,
+				60E47A4F18307C820003E4BF /* ORDisplayCell.m in Sources */,
 				60CA3153182E7E2B0022C7C8 /* ORSetupViewController.m in Sources */,
 				60E47A3D182ED07B0003E4BF /* ORFitbitAPI.m in Sources */,
+				60E47A4B183073210003E4BF /* NSData+Base64.m in Sources */,
+				60E47A46183072F90003E4BF /* ASIHTTPRequest+OAuth.m in Sources */,
+				60E47A5D18307EA60003E4BF /* ARReusableLoadingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
