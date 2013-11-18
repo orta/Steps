@@ -16,11 +16,6 @@
 		60CA312E182E77020022C7C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60CA312C182E77020022C7C8 /* Main.storyboard */; };
 		60CA3131182E77020022C7C8 /* ORStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3130182E77020022C7C8 /* ORStatsViewController.m */; };
 		60CA3133182E77020022C7C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60CA3132182E77020022C7C8 /* Images.xcassets */; };
-		60CA313A182E77020022C7C8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CA3139182E77020022C7C8 /* XCTest.framework */; };
-		60CA313B182E77020022C7C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CA311A182E77020022C7C8 /* Foundation.framework */; };
-		60CA313C182E77020022C7C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CA311E182E77020022C7C8 /* UIKit.framework */; };
-		60CA3144182E77020022C7C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60CA3142182E77020022C7C8 /* InfoPlist.strings */; };
-		60CA3146182E77020022C7C8 /* M5BitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3145182E77020022C7C8 /* M5BitTests.m */; };
 		60CA3153182E7E2B0022C7C8 /* ORSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3152182E7E2B0022C7C8 /* ORSetupViewController.m */; };
 		60E47A36182E8E8E0003E4BF /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A2C182E8E8E0003E4BF /* Base64Transcoder.c */; };
 		60E47A37182E8E8E0003E4BF /* hmac.c in Sources */ = {isa = PBXBuildFile; fileRef = 60E47A2E182E8E8E0003E4BF /* hmac.c */; };
@@ -39,37 +34,23 @@
 		A95A9BD3A7E64AC1AFF7130E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD81E4B729994DBF8D3443B5 /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		60CA313D182E77020022C7C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 60CA310F182E77020022C7C8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 60CA3116182E77020022C7C8;
-			remoteInfo = M5Bit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		4C955143C54E476CA207197B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		60CA3117182E77020022C7C8 /* M5Bit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = M5Bit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60CA3117182E77020022C7C8 /* Steps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Steps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60CA311A182E77020022C7C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60CA311C182E77020022C7C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60CA311E182E77020022C7C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		60CA3122182E77020022C7C8 /* M5Bit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "M5Bit-Info.plist"; sourceTree = "<group>"; };
+		60CA3122182E77020022C7C8 /* Steps-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Steps-Info.plist"; sourceTree = "<group>"; };
 		60CA3124182E77020022C7C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		60CA3126182E77020022C7C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		60CA3128182E77020022C7C8 /* M5Bit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "M5Bit-Prefix.pch"; sourceTree = "<group>"; };
+		60CA3128182E77020022C7C8 /* Steps-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Steps-Prefix.pch"; sourceTree = "<group>"; };
 		60CA3129182E77020022C7C8 /* ORAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORAppDelegate.h; sourceTree = "<group>"; };
 		60CA312A182E77020022C7C8 /* ORAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORAppDelegate.m; sourceTree = "<group>"; };
 		60CA312D182E77020022C7C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		60CA312F182E77020022C7C8 /* ORStatsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORStatsViewController.h; sourceTree = "<group>"; };
 		60CA3130182E77020022C7C8 /* ORStatsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORStatsViewController.m; sourceTree = "<group>"; };
 		60CA3132182E77020022C7C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		60CA3138182E77020022C7C8 /* M5BitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = M5BitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60CA3139182E77020022C7C8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		60CA3141182E77020022C7C8 /* M5BitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "M5BitTests-Info.plist"; sourceTree = "<group>"; };
-		60CA3143182E77020022C7C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		60CA3145182E77020022C7C8 /* M5BitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = M5BitTests.m; sourceTree = "<group>"; };
 		60CA3151182E7E2B0022C7C8 /* ORSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ORSetupViewController.h; sourceTree = "<group>"; };
 		60CA3152182E7E2B0022C7C8 /* ORSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ORSetupViewController.m; sourceTree = "<group>"; };
 		60E47A2C182E8E8E0003E4BF /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
@@ -115,24 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60CA3135182E77020022C7C8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60CA313A182E77020022C7C8 /* XCTest.framework in Frameworks */,
-				60CA313C182E77020022C7C8 /* UIKit.framework in Frameworks */,
-				60CA313B182E77020022C7C8 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		60CA310E182E77020022C7C8 = {
 			isa = PBXGroup;
 			children = (
-				60CA3120182E77020022C7C8 /* M5Bit */,
-				60CA313F182E77020022C7C8 /* M5BitTests */,
+				60CA3120182E77020022C7C8 /* Steps */,
 				60CA3119182E77020022C7C8 /* Frameworks */,
 				60CA3118182E77020022C7C8 /* Products */,
 				4C955143C54E476CA207197B /* Pods.xcconfig */,
@@ -142,8 +112,7 @@
 		60CA3118182E77020022C7C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60CA3117182E77020022C7C8 /* M5Bit.app */,
-				60CA3138182E77020022C7C8 /* M5BitTests.xctest */,
+				60CA3117182E77020022C7C8 /* Steps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,7 +129,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		60CA3120182E77020022C7C8 /* M5Bit */ = {
+		60CA3120182E77020022C7C8 /* Steps */ = {
 			isa = PBXGroup;
 			children = (
 				60E47A5618307D0A0003E4BF /* View */,
@@ -174,34 +143,17 @@
 				60E47A2B182E8E7F0003E4BF /* OAuth */,
 				60CA3121182E77020022C7C8 /* Supporting Files */,
 			);
+			name = Steps;
 			path = M5Bit;
 			sourceTree = "<group>";
 		};
 		60CA3121182E77020022C7C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				60CA3122182E77020022C7C8 /* M5Bit-Info.plist */,
+				60CA3122182E77020022C7C8 /* Steps-Info.plist */,
 				60CA3123182E77020022C7C8 /* InfoPlist.strings */,
 				60CA3126182E77020022C7C8 /* main.m */,
-				60CA3128182E77020022C7C8 /* M5Bit-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		60CA313F182E77020022C7C8 /* M5BitTests */ = {
-			isa = PBXGroup;
-			children = (
-				60CA3145182E77020022C7C8 /* M5BitTests.m */,
-				60CA3140182E77020022C7C8 /* Supporting Files */,
-			);
-			path = M5BitTests;
-			sourceTree = "<group>";
-		};
-		60CA3140182E77020022C7C8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				60CA3141182E77020022C7C8 /* M5BitTests-Info.plist */,
-				60CA3142182E77020022C7C8 /* InfoPlist.strings */,
+				60CA3128182E77020022C7C8 /* Steps-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -284,9 +236,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60CA3116182E77020022C7C8 /* M5Bit */ = {
+		60CA3116182E77020022C7C8 /* Steps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60CA3149182E77020022C7C8 /* Build configuration list for PBXNativeTarget "M5Bit" */;
+			buildConfigurationList = 60CA3149182E77020022C7C8 /* Build configuration list for PBXNativeTarget "Steps" */;
 			buildPhases = (
 				033A337C339445D8AC9D6F4A /* Check Pods Manifest.lock */,
 				60CA3113182E77020022C7C8 /* Sources */,
@@ -298,28 +250,10 @@
 			);
 			dependencies = (
 			);
-			name = M5Bit;
+			name = Steps;
 			productName = M5Bit;
-			productReference = 60CA3117182E77020022C7C8 /* M5Bit.app */;
+			productReference = 60CA3117182E77020022C7C8 /* Steps.app */;
 			productType = "com.apple.product-type.application";
-		};
-		60CA3137182E77020022C7C8 /* M5BitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 60CA314C182E77020022C7C8 /* Build configuration list for PBXNativeTarget "M5BitTests" */;
-			buildPhases = (
-				60CA3134182E77020022C7C8 /* Sources */,
-				60CA3135182E77020022C7C8 /* Frameworks */,
-				60CA3136182E77020022C7C8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				60CA313E182E77020022C7C8 /* PBXTargetDependency */,
-			);
-			name = M5BitTests;
-			productName = M5BitTests;
-			productReference = 60CA3138182E77020022C7C8 /* M5BitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -330,13 +264,8 @@
 				CLASSPREFIX = OR;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Orta;
-				TargetAttributes = {
-					60CA3137182E77020022C7C8 = {
-						TestTargetID = 60CA3116182E77020022C7C8;
-					};
-				};
 			};
-			buildConfigurationList = 60CA3112182E77020022C7C8 /* Build configuration list for PBXProject "M5Bit" */;
+			buildConfigurationList = 60CA3112182E77020022C7C8 /* Build configuration list for PBXProject "Steps" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -349,8 +278,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60CA3116182E77020022C7C8 /* M5Bit */,
-				60CA3137182E77020022C7C8 /* M5BitTests */,
+				60CA3116182E77020022C7C8 /* Steps */,
 			);
 		};
 /* End PBXProject section */
@@ -363,14 +291,6 @@
 				60CA3133182E77020022C7C8 /* Images.xcassets in Resources */,
 				60CA3125182E77020022C7C8 /* InfoPlist.strings in Resources */,
 				60CA312E182E77020022C7C8 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		60CA3136182E77020022C7C8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60CA3144182E77020022C7C8 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,23 +355,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60CA3134182E77020022C7C8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				60CA3146182E77020022C7C8 /* M5BitTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		60CA313E182E77020022C7C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 60CA3116182E77020022C7C8 /* M5Bit */;
-			targetProxy = 60CA313D182E77020022C7C8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		60CA3123182E77020022C7C8 /* InfoPlist.strings */ = {
@@ -468,14 +372,6 @@
 				60CA312D182E77020022C7C8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		60CA3142182E77020022C7C8 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				60CA3143182E77020022C7C8 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -560,9 +456,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "M5Bit/M5Bit-Prefix.pch";
-				INFOPLIST_FILE = "M5Bit/M5Bit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "M5Bit/Steps-Prefix.pch";
+				INFOPLIST_FILE = "M5Bit/Steps-Info.plist";
+				PRODUCT_NAME = Steps;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -574,59 +470,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "M5Bit/M5Bit-Prefix.pch";
-				INFOPLIST_FILE = "M5Bit/M5Bit-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "M5Bit/Steps-Prefix.pch";
+				INFOPLIST_FILE = "M5Bit/Steps-Info.plist";
+				PRODUCT_NAME = Steps;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		60CA314D182E77020022C7C8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/M5Bit.app/M5Bit";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "M5Bit/M5Bit-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "M5BitTests/M5BitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		60CA314E182E77020022C7C8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/M5Bit.app/M5Bit";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "M5Bit/M5Bit-Prefix.pch";
-				INFOPLIST_FILE = "M5BitTests/M5BitTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		60CA3112182E77020022C7C8 /* Build configuration list for PBXProject "M5Bit" */ = {
+		60CA3112182E77020022C7C8 /* Build configuration list for PBXProject "Steps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60CA3147182E77020022C7C8 /* Debug */,
@@ -635,20 +489,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60CA3149182E77020022C7C8 /* Build configuration list for PBXNativeTarget "M5Bit" */ = {
+		60CA3149182E77020022C7C8 /* Build configuration list for PBXNativeTarget "Steps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60CA314A182E77020022C7C8 /* Debug */,
 				60CA314B182E77020022C7C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		60CA314C182E77020022C7C8 /* Build configuration list for PBXNativeTarget "M5BitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				60CA314D182E77020022C7C8 /* Debug */,
-				60CA314E182E77020022C7C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

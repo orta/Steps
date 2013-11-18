@@ -18,7 +18,10 @@
 @interface ORStatsViewController ()
 @property (strong, nonatomic) CMStepCounter *stepCounter;
 @property (strong, nonatomic) NSMutableArray *stats;
-@property (assign, nonatomic) BOOL *getWeekLock;
+@property (strong, nonatomic) NSTimer *timer;
+@property (assign, nonatomic) NSInteger weekIndex;
+
+
 @end
 
 @implementation ORStatsViewController
@@ -32,10 +35,42 @@
 
     self.stepCounter = [[CMStepCounter alloc] init];
     self.stats = [NSMutableArray array];
+    self.weekIndex = 0;
     self.navigationItem.hidesBackButton = YES;
 
-    [self getWeekAtIndex:0];
+    [self getWeekAtIndex:self.weekIndex];
+    [self startTimer];
 }
+
+- (void)startTimer
+{
+    if (self.timer) {
+        return;
+    }
+
+    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)stopTimer
+{
+    [self.timer invalidate];
+    self.timer = nil;
+}
+
+- (void)tick:(NSTimer *)timer
+{
+    BOOL networkIsFree = ![[ORFitbitAPI sharedAPI] running];
+    BOOL nearBottom = (self.tableView.contentSize.height - CGRectGetHeight(self.view.bounds) - self.tableView.contentOffset.y) < 300;
+
+    if (networkIsFree && nearBottom) {
+        self.weekIndex++;
+        [self getWeekAtIndex:self.weekIndex];
+    }
+
+    NSLog(@"%i - %i",networkIsFree, nearBottom);
+}
+
 
 - (void)getWeekAtIndex:(NSInteger)index
 {
@@ -47,6 +82,8 @@
 
         NSDate *firstDay = [NSDate dateWithDaysBeforeNow:i];
         NSDate *lastDay = [NSDate dateWithDaysBeforeNow:i + 1];
+        stat.daysAgo = i;
+        
         NSOperationQueue *queue = [NSOperationQueue new];
 
         [self.stepCounter queryStepCountStartingFrom:lastDay to:firstDay toQueue:queue withHandler:^(NSInteger numberOfSteps, NSError *error) {
@@ -72,6 +109,9 @@
 
         } failure:^(NSError *error) {
             NSLog(@"error");
+            stat.fitbitSteps = -1;
+
+            // THERE IS A RATE LIMIT!
         }];
 
         [self.stats addObject:stat];

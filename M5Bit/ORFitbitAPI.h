@@ -11,6 +11,8 @@
 
 + (ORFitbitAPI *)sharedAPI;
 
+- (BOOL)running;
+
 - (void)getStepsForDaysAgo:(NSInteger)daysAgo :(void (^)(id JSON))onComplete failure:(void (^)(NSError *error))onFailure;
 - (void)setSteps:(NSInteger)steps forDaysAgo:(NSInteger)daysAgo :(void (^)(id JSON))onComplete failure:(void (^)(NSError *error))onFailure;
 

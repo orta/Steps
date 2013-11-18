@@ -10,6 +10,7 @@
 
 @interface ORStat : NSObject
 
+@property (assign, nonatomic) NSInteger daysAgo;
 @property (assign, nonatomic) NSInteger m5Steps;
 @property (assign, nonatomic) NSInteger fitbitSteps;
 

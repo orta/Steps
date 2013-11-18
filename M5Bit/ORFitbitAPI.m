@@ -55,6 +55,11 @@
     return self;
 }
 
+- (BOOL)running
+{
+    return self.manager.tasks.count > 0;
+}
+
 - (void)getStepsForDaysAgo:(NSInteger)daysAgo :(void (^)(id JSON))onComplete failure:(void (^)(NSError *error))onFailure
 {
     NSDate *date = [NSDate dateWithDaysBeforeNow:daysAgo];
